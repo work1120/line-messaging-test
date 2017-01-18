@@ -5,7 +5,7 @@ function post_line(event)
 {
     var post_data = JSON.stringify({
         "replyToken" : event.replyToken,
-        "messages"   : [ "hogehoge" ]
+        "messages"   : [ event.message ]
     });
     var parse_url = url.parse("https://api.line.me/v2/bot/message/reply");
     var post_options = {
